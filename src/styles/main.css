@@ -1,0 +1,150 @@
+* {
+  font-family: "Helvetica", Arial, sans-serif;
+}
+
+.home-hero-image {
+  width: 100%;
+  max-width: 1200px;
+  height: 360px;
+  background-image: url("https://images.unsplash.com/photo-1504711434969-e33886168f5c");
+  background-size: cover;
+  background-position: center;
+}
+
+.about-hero-image {
+  width: 100%;
+  max-width: 1200px;
+  height: 360px;
+  background-image: url("https://images.unsplash.com/photo-1522199710521-72d69614c702");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 6px;
+  font-size: 2rem;
+}
+
+.about-hero-text {
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 6px;
+  font-size: 2rem;
+}
+
+.active-link {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.category-news {
+  color: brown;
+}
+
+.rounded {
+  border-radius: 0px !important;
+}
+
+.view-link {
+  color: green;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.search-box {
+  max-width: 500px;
+  width: 100%;
+}
+
+.btn .btn-primary {
+  border-radius: 50%;
+}
+
+.article-text {
+  font-size: 14px;
+}
+
+.top-news-text {
+  color: darkgreen;
+}
+
+.bitcoin-text, .headlines-text, .article-detail, .country-text, .country-news-category, .feeds-text, .search-text {
+  color: brown;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.news-category {
+  color: darkblue;
+  font-weight: bold;
+}
+
+.read-article {
+  text-align: center !important;
+}
+
+.footer {
+  background-color: rgba(68, 68, 68, .87);
+}
+
+.article-card {
+  border-radius: 0px !important;
+}
+
+.country-source {
+  border-radius: 5px;
+}
+
+.card-img, .card-img-top {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+/*--- Media Queries ---*/
+@media (max-width: 768px) {
+  .home-hero-image {
+    height: 220px;
+  }
+  .hero-text {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .about-hero-image {
+    height: 220px;
+  }
+  .about-hero-text {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .news-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-custom {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
