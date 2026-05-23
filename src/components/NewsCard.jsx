@@ -18,7 +18,7 @@ function NewsCard({ article }) {
       <div className="card-body">
         <h6 className="card-title article-text">{article.title}</h6>
         <div className="mt-2">
-          <Link to="/article-detail/${articleId}" className="view-link" state={article}>
+          <Link to={`/article-detail/${articleId}`} className="view-link" state={article}>
             VIEW <span style={{ marginLeft: "4px" }}>→</span>
           </Link>
         </div>
