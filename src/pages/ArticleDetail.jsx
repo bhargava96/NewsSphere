@@ -1,9 +1,9 @@
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function ArticleDetail() {
   const { state } = useLocation();
   const navigate = useNavigate();
-  const { id } = useParams();
+
 
   if (!state) {
     return (
