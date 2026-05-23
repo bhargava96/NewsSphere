@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 import logo from "../assets/news-logo.png";
 
-function Header() {
+function Header({ theme, toggleTheme }) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <nav className="navbar navbar-expand-lg navbar-custom px-3">
       {/* Logo instead of text */}
       <NavLink className="navbar-brand d-flex align-items-center" to="/">
         <img
@@ -11,16 +11,14 @@ function Header() {
           alt="NewsSphere Logo"
           style={{ height: "46px", width: "80px", marginRight: "8px" }}
         />
-        {/* Optional: text next to logo */}
-        {/* <span>NewsSphere</span> */}
       </NavLink>
 
-      <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-        <span className="navbar-toggler-icon"></span>
+      <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" style={{ borderColor: "var(--border-color)" }}>
+        <span className="navbar-toggler-icon" style={{ filter: theme === "dark" ? "invert(1)" : "none" }}></span>
       </button>
 
       <div className="collapse navbar-collapse justify-content-end" id="menu">
-        <ul className="navbar-nav">
+        <ul className="navbar-nav align-items-center">
           {[
             ["Home", "/"],
             ["TopHeadlines", "/headlines"],
@@ -42,6 +40,11 @@ function Header() {
               </NavLink>
             </li>
           ))}
+          <li className="nav-item">
+            <button className="theme-toggle-btn" onClick={toggleTheme} aria-label="Toggle Theme">
+              {theme === "dark" ? "☀️" : "🌙"}
+            </button>
+          </li>
         </ul>
       </div>
     </nav>
