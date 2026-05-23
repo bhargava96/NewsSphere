@@ -47,12 +47,12 @@ function Categories() {
       <hr />
 
       {/* CATEGORY NAV */}
-      <ul className="nav justify-content-center mt-4 flex-wrap">
+      <ul className="nav justify-content-center mt-4 flex-wrap nav-pills-custom">
         {categories.map((c) => (
           <li key={c} className="nav-item">
             <button
               className={`btn ${
-                cat === c ? "btn-dark" : "btn-outline-secondary"
+                cat === c ? "btn-dark-active" : ""
               } m-1`}
               onClick={() => setCat(c)}
             >
